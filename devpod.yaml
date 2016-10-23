@@ -4,7 +4,7 @@ metadata:
   name: devpod
 spec:
   containers:
-  - image: moander/devpod:v2
+  - image: moander/devpod:v3
     imagePullPolicy: IfNotPresent
     name: devpod
   restartPolicy: Always

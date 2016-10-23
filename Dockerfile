@@ -1,13 +1,5 @@
 FROM buildpack-deps
 
-RUN apt-get update \
- && apt-get install -y --no-install-recommends \
-      nano \
-      php5-cli \
-      dnsutils \
-      traceroute \
- && rm -rf /var/lib/apt/lists/*
-
 # Work around https://github.com/dotnet/cli/issues/1582 until Docker releases a
 # fix (https://github.com/docker/docker/issues/20818). This workaround allows
 # the container to be run with the default seccomp Docker settings by avoiding
@@ -48,6 +40,15 @@ RUN mkdir warmup \
     && cd .. \
     && rm -rf warmup \
     && rm -rf /tmp/NuGetScratch
+
+
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends \
+      nmap \
+      php5-cli \
+      dnsutils \
+      traceroute \
+ && rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update
 

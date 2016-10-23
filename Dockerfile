@@ -48,6 +48,7 @@ RUN apt-get update \
       php5-cli \
       dnsutils \
       traceroute \
+      httpie \
  && rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update

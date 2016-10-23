@@ -1,0 +1,13 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: devpod
+spec:
+  containers:
+  - image: moander/devpod:v1
+    imagePullPolicy: IfNotPresent
+    name: devpod
+  restartPolicy: Always
+  terminationGracePeriodSeconds: 1
+
+

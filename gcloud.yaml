@@ -1,0 +1,13 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: gcloud
+  namespace: moander
+spec:
+  containers:
+  - image: google/cloud-sdk
+    command:
+      - sleep
+      - "3600"
+  terminationGracePeriodSeconds: 1
+

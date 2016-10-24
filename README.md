@@ -10,3 +10,7 @@ Attach to pod
     kubectl exec -it devpod bash
 
 
+## moander
+
+    kubectl apply -f https://raw.githubusercontent.com/moander/devpod/moander/moander.yaml
+

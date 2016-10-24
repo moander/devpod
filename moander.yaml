@@ -1,0 +1,31 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: moander
+---
+kind: Pod
+apiVersion: v1
+metadata:
+  name: devpod
+  namespace: moander
+spec:
+  containers:
+  - image: moander/devpod:moander
+    name: devpod
+  restartPolicy: Always
+  terminationGracePeriodSeconds: 1
+---
+kind: Pod
+apiVersion: v1
+metadata:
+  name: gcloud
+  namespace: moander
+spec:
+  containers:
+  - image: google/cloud-sdk
+    name: gcloud
+    command:
+      - sleep
+      - "3600"
+  restartPolicy: Always
+  terminationGracePeriodSeconds: 1

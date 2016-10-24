@@ -51,6 +51,8 @@ RUN apt-get update \
       httpie \
  && rm -rf /var/lib/apt/lists/*
 
+RUN curl https://sdk.cloud.google.com | bash
+
 RUN apt-get update
 
 WORKDIR /root
